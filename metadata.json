@@ -1,0 +1,6 @@
+{
+  "name": "Smart Question Paper Maker",
+  "description": "Create, organize, format question banks, and generate professional exam papers with MCQ, CQ, and Short questions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
