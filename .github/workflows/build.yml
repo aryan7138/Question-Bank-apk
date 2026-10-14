@@ -15,11 +15,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+    # এটি Gradle ইনস্টল করবে, তাই gradlew ফাইলের দরকার নেই
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
 
+    # সরাসরি gradle কমান্ড দিয়ে বিল্ড করা হচ্ছে
     - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      run: gradle assembleDebug
 
     - name: Verify APK exists
       run: |
